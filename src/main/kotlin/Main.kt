@@ -6,14 +6,19 @@ import java.io.File
 
 
 fun main() {
-    print(myLambada(2,4))
-//    print(pesco("10262510086240"))
+//    print(myLambada(2,4))
+//    println(pesco("03262140036865"))
+    print(myMutableList()[0])
 }
 
 
+fun myMutableList() : MutableList<String>{
+    var a  = mutableListOf<String>("Apples","Mangoes")
+    return a
+}
 
 /*---------------- LAMBDA--------------*/
-val myLambada = {x:Int,y:Int ->
+val myLambada = { x: Int, y: Int ->
     "Hello Now I am returning UNIT"
 //    (x+y)*0.00001
 }
@@ -62,6 +67,13 @@ fun stringFun(): String {
     return "Job Done"
 }
 
+
+    // Put Space after Each Capital Letter
+    fun putSpaceInCapitalWorld() {
+        // Put Space after Each Capital Letter
+        var str = "HelloWorld"
+        print(str.replace("((?<![0-9])(?<![A-Z])[A-Z](?![A-Z])(?![0-9]))".toRegex()," $1"))
+    }
 /*REGEX Good Example*/
 fun goodREGEX() {
     val inputString = "John 9731879"
