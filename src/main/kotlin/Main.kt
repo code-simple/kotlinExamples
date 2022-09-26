@@ -72,7 +72,7 @@ fun stringFun(): String {
     fun putSpaceInCapitalWorld() {
         // Put Space after Each Capital Letter
         var str = "HelloWorld"
-        print(str.replace("((?<![0-9])(?<![A-Z])[A-Z](?![A-Z])(?![0-9]))".toRegex()," $1"))
+        print(str.replace("((?<![0-9])(?<![A-Z])[A-Z](?![A-Z])(?![0-9]))".toRegex()," $1").trim())
     }
 /*REGEX Good Example*/
 fun goodREGEX() {
