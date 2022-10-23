@@ -6,14 +6,20 @@ import java.io.File
 
 
 fun main() {
-//    print(myLambada(2,4))
-//    println(pesco("03262140036865"))
-    print(myMutableList()[0])
 }
 
 
+// Extensions
+fun myExtension(){
+    // This function is actually an extension removeFirstLastChar i made
+    fun String.removeFirstLastChar():String = this.substring(1,this.length-1)
+
+    print("Hello World".removeFirstLastChar())
+}
+
 fun myMutableList() : MutableList<String>{
     var a  = mutableListOf<String>("Apples","Mangoes")
+    a.add("oranges")
     return a
 }
 
